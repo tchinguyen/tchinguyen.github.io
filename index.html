@@ -1,223 +1,249 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Thi The Data Scientist Portfolio</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
-    <!-- FontAwesome for icons (if needed) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thi Nguyen - Data Science Portfolio</title>
+    
+    <!-- Tailwind CSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
-<body class="is-preload">
+<body class="bg-gray-50 text-gray-800 leading-normal">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- <div class="text-2xl font-bold text-blue-600">Thi Nguyen</div> -->
+            <div class="space-x-6">
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition font-medium">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-blue-600 transition font-medium">Skills</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 transition font-medium">Projects</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+<header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white pt-24 pb-16">
+    <div class="container mx-auto px-4 text-center">
+        <img src="images/pic01.jpg" alt="Thi Nguyen" class="mx-auto rounded-full w-48 h-48 object-cover mb-6 border-4 border-white">
+        <h1 class="text-4xl font-bold mb-4">Welcome! I'm Thi Nguyen</h1>
+        <p class="text-xl mb-6">Data Scientist | Machine Learning Enthusiast | Problem Solver</p>
+        <div class="space-x-4">
+            <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition">View Projects</a>
+            <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">Contact Me</a>
+        </div>
+    </div>
+</header>
 
-    <!-- Header -->
-    <section id="header">
-        <div class="inner">
-            <span class="icon solid major fa-cloud"></span>
-            <h1>Hi, I'm <strong>Thi Nguyen</strong></h1>
-            <p>Welcome to my portfolio! Here you'll find my projects, skills, and more.</p>
-            <ul class="actions special">
-                <li><a href="#one" class="button scrolly">Discover</a></li>
-            </ul>
+<!-- About Me Section -->
+<section id="about" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <!-- <div class="grid md:grid-cols-2 gap-8 items-center"> -->
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-blue-600">About Me</h2>
+                <p class="text-gray-600 mb-4">I am a dedicated Data Scientist with a strong passion for extracting meaningful insights from complex datasets. My expertise lies in machine learning, statistical analysis, cloud computing, and data engineering.</p>
+                <p class="text-gray-600 mb-4">I hold a Bachelor's degree in Statistics and Data Science from the <strong>University of California, Los Angles (UCLA)</strong>, where I built a solid foundation in data analytics, predictive modeling, and programming.</p>
+                <p class="text-gray-600 mb-4">Currently, I am pursuing my Master’s in Data Science at the <strong>University of San Francisco</strong>, where I work on real-world data challenges, develop scalable algorithms, and collaborate with cross-functional teams to drive data-driven decision-making.</p>
+                <p class="text-gray-600">Below, you'll find a selection of my favorite projects showcasing my work. I hope you enjoy exploring them!</p>
+            </div>
+            <!-- <div class="flex justify-center">
+                <img src="images/pic01.jpg" alt="Thi Nguyen" class="rounded-full w-64 h-64 object-cover border-4 border-blue-600">
+            </div> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6 text-blue-600 text-center">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-600">
+            <div><strong>Programming:</strong> Python, SQL, R</div>
+            <div><strong>Data Processing:</strong> Pandas, NumPy, Spark</div>
+            <div><strong>Cloud & Big Data:</strong>  Google Cloud, BigQuery</div>
+            <div><strong>Visualization:</strong> Matplotlib, Seaborn, Tableau</div>
+			<div><strong>Machine Learning & AI:</strong> Scikit-learn, TensorFlow, PyTorch, XGBoost</div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <!-- Machine Learning Projects -->
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">Machine Learning Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Height Prediction Project -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic02.jpg" alt="Height Prediction" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Growing Beyond Genes: Height Prediction</h3>
+                    <p class="text-gray-600 mb-4">Advanced XGBoost model predicting adolescent height using a comprehensive two-generation dataset, exploring intricate relationships between childhood growth and parental traits.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://github.com/tchinguyen/height_prediction" class="text-blue-600 hover:underline">View Project</a>
+                        <!-- <span class="text-sm text-gray-500">Machine Learning</span> -->
+                    </div>
+                </div>
+
+                <!-- Car Accident Severity Project -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic04.jpg" alt="Car Accident Severity" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Predicting Car Accident Severity</h3>
+                    <p class="text-gray-600 mb-4">Implemented Random Forest algorithm to identify critical variables influencing car accident severity, developing a predictive model with high accuracy and actionable insights.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://github.com/tchinguyen/Predicting-the-Severity-of-Car-Accidents" class="text-blue-600 hover:underline">View Project</a>
+                        <!-- <span class="text-sm text-gray-500">Predictive Modeling</span> -->
+                    </div>
+                </div>
+
+                <!-- User Engagement Project -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic05.jpg" alt="User Engagement" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">User Engagement Analysis</h3>
+                    <p class="text-gray-600 mb-4">Conducted comprehensive analysis exploring key metrics predicting user adoption and engagement across diverse user groups in a collaborative digital platform.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://github.com/tchinguyen/User-Engagement-Analysis-in-a-Collaboration-Platform" class="text-blue-600 hover:underline">View Project</a>
+                        <!-- <span class="text-sm text-gray-500">Data Analysis</span> -->
+                    </div>
+                </div>
+
+                <!-- League of Legends Gold Analysis -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic06.jpg" alt="League of Legends Gold Analysis" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Team Gold in League of Legends</h3>
+                    <p class="text-gray-600 mb-4">Advanced statistical analysis of match data to uncover significant factors influencing a team's gold accumulation strategies during competitive gameplay.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://github.com/tchinguyen/Analyzing-the-Amount-of-Gold-of-a-Team-in-a-League-of-Legends-Match" class="text-blue-600 hover:underline">View Project</a>
+                        <!-- <span class="text-sm text-gray-500">Statistical Analysis</span> -->
+                    </div>
+                </div>
+
+                <!-- Job Post Performance Analysis -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic07.jpg" alt="Job Post Performance" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Job Post Performance Analysis</h3>
+                    <p class="text-gray-600 mb-4">Developed predictive model identifying key variables affecting job posting performance on Indeed, including duration, description, and strategic timing optimization.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://github.com/tchinguyen/Analyzing-Factors-Affecting-Job-Post-Performance-on-Indeed" class="text-blue-600 hover:underline">View Project</a>
+                        <!-- <span class="text-sm text-gray-500">Predictive Analytics</span> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- A/B Testing and Data Standardization -->
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">A/B Testing & Data Standardization</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Webflix A/B Testing -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic03.jpg" alt="Webflix A/B Testing" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Webflix A/B Testing</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive A/B testing framework to optimize homepage design, focusing on reducing user browsing time and improving engagement and subscription conversion rates.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://github.com/tchinguyen/Webflix-A-B-Testing" class="text-blue-600 hover:underline">View Project</a>
+                        <!-- <span class="text-sm text-gray-500">Experimental Design</span> -->
+                    </div>
+                </div>
+
+                <!-- Automated Data Standardization -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic08.jpg" alt="Automated Data Standardization" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Automated College Data Standardization</h3>
+                    <p class="text-gray-600 mb-4">Innovative method for calculating string similarities and providing intelligent recommendations for standardizing complex institutional naming conventions.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://github.com/tchinguyen/Automated-Standardization-College-Data-" class="text-blue-600 hover:underline">View Project</a>
+                        <!-- <span class="text-sm text-gray-500">Data Cleaning</span> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboards -->
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">Data Visualization Dashboards</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- House Sale Dashboard -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic11.jpg" alt="House Sale Dashboard" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">House Sale Dashboard</h3>
+                    <p class="text-gray-600 mb-4">Interactive Tableau dashboard providing comprehensive insights into housing market trends, sales dynamics, and key performance indicators.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://public.tableau.com/app/profile/thi.nguyen8330/viz/house_sale/KINGCOUNTYHOUSESALE" class="text-blue-600 hover:underline">View Dashboard</a>
+                        <!-- <span class="text-sm text-gray-500">Data Visualization</span> -->
+                    </div>
+                </div>
+
+                <!-- Sales Dashboard -->
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300">
+                    <img src="images/pic12.jpg" alt="Sales AtlrQ Hardware Dashboard" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">AtlrQ Hardware Sales Dashboard</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive Tableau sales insights dashboard for AtlrQ Hardware, visualizing critical sales metrics and performance trends.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="https://public.tableau.com/app/profile/thi.nguyen8330/viz/SalesInsightsforAtlrQhardware/Dashboard1" class="text-blue-600 hover:underline">View Dashboard</a>
+                        <!-- <span class="text-sm text-gray-500">Business Intelligence</span> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Contact and Footer sections remain the same as in the previous version -->
+    <section id="contact" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-blue-600">Get In Touch</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-700">
+                Passionate about data science, machine learning, and innovative tech solutions? I'm always excited to collaborate, discuss potential projects, or explore new opportunities.
+            </p>
+            <div class="space-x-4">
+                <a href="mailto:nguyenttchi03@gmail.com" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition inline-flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/thi-nguyen-082163156/" target="_blank" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white transition inline-flex items-center">
+                    <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="space-x-4 mb-4">
+                <a href="https://www.linkedin.com/in/thi-nguyen-082163156/" target="_blank" class="text-2xl hover:text-blue-400 transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/tchinguyen" target="_blank" class="text-2xl hover:text-gray-400 transition">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">&copy; 2025 Thi Nguyen. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
-</html>
-
-<!-- About Me -->
-<section id="about" class="main style1" style="background-image: url('images/bg.jpg'); background-size: cover; background-position: center; padding: 50px 0;">
-    <div class="container">
-        <div class="row gtr-150">
-            <div class="col-6 col-12-medium">
-                <header class="major">
-                    <h2><strong>About Me</strong></h2>
-                </header>
-                <p>I'm a Data Scientist passionate about uncovering insights from data. I specialize in machine learning, statistical analysis, and cloud computing.</p>
-                <p>I earned my Bachelor's degree in Statistics and Data Science from the <strong>University of California - Los Angeles (UCLA)</strong>, where I built a strong foundation in data analysis, predictive modeling, and programming.</p>
-                <p>Currently, I'm pursuing my Master's in Data Science at the <strong>University of San Francisco</strong>. I enjoy working on real-world projects, optimizing algorithms, and collaborating with teams to solve complex problems.</p>
-            	<p>In my portfolio below, I'd like to share some of my projects I completed so far that I found interesting. Hope you enjoy reading it!</p>
-			</div>
-            <div class="col-6 col-12-medium imp-medium">
-                <!-- Square Headshot Image with Adjusted Position -->
-                <span class="image fit">
-                    <img src="images/pic01.jpg" alt="About Me" style="max-width: 80%; height: 300%; border-radius: 250px; object-fit: cover; margin-top: 150px;">
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
- <!-- Machine Learning Projects -->
-
-<section id="machine-learning" class="main style1 special">
-    <div class="container">
-        <header class="major">
-            <h2><strong>Machine Learning</strong></h2>
-			<p>Click "more" for details and source code on Github</p>
-        </header>
-
-        <!-- Row 1: Machine Learning Projects (3 Columns) -->
-        <div class="row gtr-150" style="justify-content: left; text-align: left;">
-            <!-- Column 1 -->
-            <div class="col-4 col-12-medium" style="margin-bottom: 150px;">
-                <span class="image fit"><img src="images/pic02.jpg" alt="Growing Beyond Genes" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>Growing Beyond Genes: Predicting Adolescent Height</h3>
-                <p>This project uses XGBoost to predict adolescent height based on a two-generation dataset, exploring how early childhood growth and parental traits impact height development.</p>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://github.com/tchinguyen/height_prediction" class="button">More</a>
-                </div>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-4 col-12-medium" style="margin-bottom: 30px;">
-                <span class="image fit"><img src="images/pic04.jpg" alt="Predicting Car Accidents" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>Predicting the Severity of Car Accidents</h3>
-                <p>Using the Random Forest method, this project identifies variables influencing car accident severity and builds a model that predicts accident outcomes with high accuracy.</p>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://github.com/tchinguyen/Predicting-the-Severity-of-Car-Accidents" class="button">More</a>
-                </div>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="col-4 col-12-medium" style="margin-bottom: 30px;">
-                <span class="image fit"><img src="images/pic05.jpg" alt="User Engagement Analysis in a Collaboration Platform" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>User Engagement Analysis in a Collaboration Platform</h3>
-                <p>This analysis explores key metrics that predict user adoption and engagement across user groups, evaluating the effectiveness of a collaboration platform in fostering active participation.</p>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://github.com/tchinguyen/User-Engagement-Analysis-in-a-Collaboration-Platform" class="button">More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Row 2: Machine Learning Projects (2 Columns) -->
-        <div class="row gtr-150" style="justify-content: left; text-align: left;">
-            <!-- Column 1 -->
-            <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="images/pic06.jpg" alt="Analyzing the Amount of Gold of a Team in a League of Legends Match" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>Analyzing Team Gold in a League of Legends Match</h3>
-                <p>This project analyzes League of Legends match data to uncover the significant factors influencing a team’s gold accumulation during gameplay, affecting in-game strategy.</p>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://github.com/tchinguyen/Analyzing-the-Amount-of-Gold-of-a-Team-in-a-League-of-Legends-Match" class="button">More</a>
-                </div>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="images/pic07.jpg" alt="Factors Affecting Job Post Performance on Indeed" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>Factors Affecting Job Post Performance on Indeed</h3>
-                <p>This analysis identifies key variables—posting duration, job description length, salary, and month—affecting the number of clicks a job posting receives on Indeed.</p>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://github.com/tchinguyen/Analyzing-Factors-Affecting-Job-Post-Performance-on-Indeed" class="button">More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- A/B Testing and Data Standardization Projects -->
-<section id="ab-testing" class="main style1 special">
-    <div class="container">
-        <header class="major">
-            <h2><strong>A/B Testing and Data Standardization</strong></h2>
-        </header>
-        <div class="row gtr-100">
-            <!-- Row 1: A/B Testing and Data Standardization (2 Columns) -->
-            <div class="col-6 col-12-medium" style="margin-bottom: 20px; text-align: left;">
-                <span class="image fit"><img src="images/pic03.jpg" alt="Webflix A/B Testing" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>Webflix A/B Testing</h3>
-                <p>This project focuses on optimizing the Webflix homepage to minimize user browsing time. Research shows that excessive browsing time can lead to decision paralysis, negatively impacting user engagement and subscription renewal rates.</p>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://github.com/tchinguyen/Webflix-A-B-Testing" class="button">More</a>
-                </div>
-            </div>
-            <div class="col-6 col-12-medium" style="margin-bottom: 20px; text-align: left;">
-                <span class="image fit"><img src="images/pic08.jpg" alt="Automated Standardization College Data" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>Automated Standardization College Data</h3>
-                <p>This project aims to develop a method that calculates the difference (or similarity) between two strings (such as school or metric names) and automatically provides recommendations for top matches and standardized names.</p>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://github.com/tchinguyen/Automated-Standardization-College-Data-" class="button">More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Data Viz Projects -->
-<section id="dashboards" class="main style1 special">
-    <div class="container">
-        <header class="major">
-            <h2><strong>Dashboards</strong></h2>
-        </header>
-        <div class="row gtr-100">
-            <!-- Row 1: Dashboards (2 Columns) -->
-            <div class="col-6 col-12-medium" style="margin-bottom: 20px; text-align: left;">
-                <span class="image fit"><img src="images/pic11.jpg" alt="House Sale Dashboard" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>House Sale</h3>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://public.tableau.com/app/profile/thi.nguyen8330/viz/house_sale/KINGCOUNTYHOUSESALE" class="button">More</a>
-                </div>
-            </div>
-            <div class="col-6 col-12-medium" style="margin-bottom: 20px;text-align: left;">
-                <span class="image fit"><img src="images/pic12.jpg" alt="Sales AtlrQ Hardware Dashboard" style="width:100%; height:200px; object-fit:cover;" /></span>
-                <h3>Sales AtlrQ Hardware</h3>
-                <br>
-                <div style="display: flex; justify-content: left; gap: 10px;">
-                    <a href="https://public.tableau.com/app/profile/thi.nguyen8330/viz/SalesInsightsforAtlrQhardware/Dashboard1" class="button">More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Contact Me -->
-<section id="contact" class="main style2 special" style="background-image: url('images/ft.jpg'); background-size: cover; background-position: center; padding: 50px 0;">
-    <div class="container">
-        <header class="major">
-            <h2><strong>Contact Me</strong></h2>
-        </header>
-        <p>If you have any questions, comments, or would like to collaborate on a project, feel free to reach out. I'd love to hear from you!</p>
-        <ul class="actions special">
-            <li><a href="mailto:nguyenttchi03@gmail.com" class="button wide primary">Email Me</a></li>
-            <li><a href="https://www.linkedin.com/in/thi-nguyen-082163156/" class="button wide">Connect on LinkedIn</a></li>
-        </ul>
-    </div>
-</section>
-
-		<!-- Footer -->
-		<section id="footer">
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/thi-nguyen-082163156/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-				<li><a href="https://github.com/tchinguyen" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="mailto:nguyenttchi03@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Thi Nguyen</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</section>
-		
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
